@@ -19,8 +19,6 @@ module Api
         end
       end
 
-      # We don't need the 'if payload.present?' check here anymore
-      # because validate_currency_exists! already guaranteed data exists.
       render json: { from: currency, rates: payload }
     end
 
