@@ -1,0 +1,9 @@
+# config/sidekiq.yml
+:queues:
+  - exchange_rates
+
+# config/schedule.yml
+fetch_exchange_rates:
+  cron: "*/5 * * * *"
+  class: "FetchExchangeRatesJob"
+  queue: "exchange_rates"
